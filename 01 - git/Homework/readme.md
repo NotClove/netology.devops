@@ -26,6 +26,9 @@
 `.terraformrc`
 
 ## Задание 2
+
+![Commits links](https://github.com/NotClove/netology.devops/commits/master)
+
 commit 33db08303c20cdecc6369a67511c2a2e9e87323e (HEAD -> master)
 Author: Andrey Martyanov <shulsfm@gmail.com>
 Date:   Sat May 7 11:52:49 2022 +0300
