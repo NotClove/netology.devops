@@ -26,7 +26,7 @@
     ![04](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/02.jpg?raw=true)
 5. Получится ли одновременно передать команде файл на stdin и вывести ее stdout в другой файл? Приведите работающий пример.
 
-6. ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/03.jpg?raw=true)
+    ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/03.jpg?raw=true)
 7. Получится ли находясь в графическом режиме, вывести данные из PTY в какой-либо из эмуляторов TTY? Сможете ли вы наблюдать выводимые данные?
     ![06](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/04.jpg?raw=true)
 8. Выполните команду `bash 5>&1`. К чему она приведет? Что будет, если вы выполните `echo netology > /proc/$$/fd/5`? Почему так происходит?
