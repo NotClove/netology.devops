@@ -20,11 +20,14 @@
 
 3. Какой процесс с PID `1` является родителем для всех процессов в вашей виртуальной машине Ubuntu 20.04?
 
-    ![03](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/01.jpg)
+    ![03](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/01.jpg?raw=true)
 
 4. Как будет выглядеть команда, которая перенаправит вывод stderr `ls` на другую сессию терминала?
+    ![04](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/02.jpg?raw=true)
 5. Получится ли одновременно передать команде файл на stdin и вывести ее stdout в другой файл? Приведите работающий пример.
+    ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/03.jpg?raw=true)
 6. Получится ли находясь в графическом режиме, вывести данные из PTY в какой-либо из эмуляторов TTY? Сможете ли вы наблюдать выводимые данные?
+    ![06](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/04.jpg?raw=true)
 7. Выполните команду `bash 5>&1`. К чему она приведет? Что будет, если вы выполните `echo netology > /proc/$$/fd/5`? Почему так происходит?
 
     ```
@@ -33,9 +36,10 @@
    netology
    это происходит из-за дескриптора, который выводит поток в bash (в моем случае /dev/pts/0), так же как и потоки 0,1,2,255, которые создаются по умолчанию
    ```
-
+   
 8. Получится ли в качестве входного потока для pipe использовать только stderr команды, не потеряв при этом отображение stdout на pty? Напоминаем: по умолчанию через pipe передается только stdout команды слева от `|` на stdin команды справа.
 Это можно сделать, поменяв стандартные потоки местами через промежуточный новый дескриптор, который вы научились создавать в предыдущем вопросе.
+    ![08](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/05.jpg?raw=true)
 9. Что выведет команда `cat /proc/$$/environ`? Как еще можно получить аналогичный по содержанию вывод?
 
     ```commandline
@@ -73,8 +77,8 @@
     в файле: /etc/sysctl.d/10-ptrace.conf
     kernel.yama.ptrace_scope = 0
     после этого перезагрузка правила: sudo sysctl -p /etc/sysctl.d/10-ptrace.conf
-     
     ```
+    ![13](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-02-terminal/pics/06.jpg?raw=true)
 
 14. `sudo echo string > /root/new_file` не даст выполнить перенаправление под обычным пользователем, так как перенаправлением занимается процесс shell'а, который запущен без `sudo` под вашим пользователем. Для решения данной проблемы можно использовать конструкцию `echo string | sudo tee /root/new_file`. Узнайте что делает команда `tee` и почему в отличие от `sudo echo` команда с `sudo tee` будет работать.
 
