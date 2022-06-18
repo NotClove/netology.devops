@@ -39,7 +39,9 @@
 6. Какой системный вызов использует `uname -a`? Приведите цитату из man по этому системному вызову, где описывается альтернативное местоположение в `/proc`, где можно узнать версию ядра и релиз ОС.
 
    ![06_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-03-os/pics/06_1.jpg?raw=true)
+
    ![06_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-03-os/pics/06_2.jpg?raw=true)
+
    ![06_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-03-os/pics/06_3.jpg?raw=true)
 
 7. Чем отличается последовательность команд через `;` и через `&&` в bash? Например:
