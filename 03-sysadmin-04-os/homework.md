@@ -6,9 +6,10 @@
     ![01_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_1.jpg?raw=true)
     ![01_4](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_4.jpg?raw=true)
     * предусмотрите возможность добавления опций к запускаемому процессу через внешний файл (посмотрите, например, на `systemctl cat cron`),
-    ![]()
-    ![]()
+    ![01_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_2.jpg?raw=true)
+    ![01_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_3.jpg?raw=true)
     * удостоверьтесь, что с помощью systemctl процесс корректно стартует, завершается, а после перезагрузки автоматически поднимается.
+    ![]()
 
 1. Ознакомьтесь с опциями node_exporter и выводом `/metrics` по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
 1. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). После успешной установки:
