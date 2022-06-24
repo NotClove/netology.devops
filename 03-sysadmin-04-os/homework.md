@@ -44,9 +44,11 @@
    ![04_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/4_2.jpg?raw=true)
 5. Как настроен sysctl `fs.nr_open` на системе по-умолчанию? Узнайте, что означает этот параметр. Какой другой существующий лимит не позволит достичь такого числа (`ulimit --help`)?
 
-    ![05]()
+    ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/05.jpg?raw=true)
     ```
-   
+    sysctl fs.nr_open - это хард лимит открываемых file descriptors
+    его же можно посмотреть командой ulimit -Hn
+    кроме того существует софт ограничение, посмотреть лимит ulimit -Sn
     ```
 
 
