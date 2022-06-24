@@ -3,7 +3,11 @@
 1. На лекции мы познакомились с [node_exporter](https://github.com/prometheus/node_exporter/releases). В демонстрации его исполняемый файл запускался в background. Этого достаточно для демо, но не для настоящей production-системы, где процессы должны находиться под внешним управлением. Используя знания из лекции по systemd, создайте самостоятельно простой [unit-файл](https://www.freedesktop.org/software/systemd/man/systemd.service.html) для node_exporter:
 
     * поместите его в автозагрузку,
+    ![01_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_1.jpg?raw=true)
+    ![01_4](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_4.jpg?raw=true)
     * предусмотрите возможность добавления опций к запускаемому процессу через внешний файл (посмотрите, например, на `systemctl cat cron`),
+    ![]()
+    ![]()
     * удостоверьтесь, что с помощью systemctl процесс корректно стартует, завершается, а после перезагрузки автоматически поднимается.
 
 1. Ознакомьтесь с опциями node_exporter и выводом `/metrics` по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
