@@ -3,12 +3,15 @@
 1. На лекции мы познакомились с [node_exporter](https://github.com/prometheus/node_exporter/releases). В демонстрации его исполняемый файл запускался в background. Этого достаточно для демо, но не для настоящей production-системы, где процессы должны находиться под внешним управлением. Используя знания из лекции по systemd, создайте самостоятельно простой [unit-файл](https://www.freedesktop.org/software/systemd/man/systemd.service.html) для node_exporter:
 
     * поместите его в автозагрузку,
+   
     ![01_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_1.jpg?raw=true)
     ![01_4](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_4.jpg?raw=true)
     * предусмотрите возможность добавления опций к запускаемому процессу через внешний файл (посмотрите, например, на `systemctl cat cron`),
+   
     ![01_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_2.jpg?raw=true)
     ![01_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_3.jpg?raw=true)
     * удостоверьтесь, что с помощью systemctl процесс корректно стартует, завершается, а после перезагрузки автоматически поднимается.
+   
     ![01_22](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/01_22.jpg?raw=true)
 
 2. Ознакомьтесь с опциями node_exporter и выводом `/metrics` по-умолчанию. Приведите несколько опций, которые вы бы выбрали для базового мониторинга хоста по CPU, памяти, диску и сети.
@@ -29,6 +32,7 @@
    ```
 3. Установите в свою виртуальную машину [Netdata](https://github.com/netdata/netdata). Воспользуйтесь [готовыми пакетами](https://packagecloud.io/netdata/netdata/install) для установки (`sudo apt install -y netdata`). После успешной установки:
     * в конфигурационном файле `/etc/netdata/netdata.conf` в секции [web] замените значение с localhost на `bind to = 0.0.0.0`,
+   
     ![3_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/3_2.jpg?raw=true)
     * добавьте в Vagrantfile проброс порта Netdata на свой локальный компьютер и сделайте `vagrant reload`:
 
@@ -37,6 +41,7 @@
     ```
 
     После успешной перезагрузки в браузере *на своем ПК* (не в виртуальной машине) вы должны суметь зайти на `localhost:19999`. Ознакомьтесь с метриками, которые по умолчанию собираются Netdata и с комментариями, которые даны к этим метрикам.
+
     ![3_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/3_1.jpg?raw=true)
 
 4. Можно ли по выводу `dmesg` понять, осознает ли ОС, что загружена не на настоящем оборудовании, а на системе виртуализации?
