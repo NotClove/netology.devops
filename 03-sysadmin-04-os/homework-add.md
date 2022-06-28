@@ -11,4 +11,12 @@ https://stackoverflow.com/questions/48843949/systemd-use-variables-in-a-unit-fil
 
     В случае с node_exporter переменные передавались через файл EnvironmentFile, я его не показал в дз, думал что раз переменная у службы есть, значит этого не нужно)
 
-    
+    ![unit](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/unitfile.jpg?raw=true)
+
+    ![EnvironmentFile](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/options.jpg?raw=true)
+
+    ![status](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/status.jpg?raw=true)
+
+    ![env](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/env.jpg?raw=true)
+
+    ![result](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-04-os/pics/result.jpg?raw=true)
