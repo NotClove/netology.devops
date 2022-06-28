@@ -69,7 +69,7 @@ HOST: stackoverflow.com
   ![07](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-06-net/pics/07.png?raw=true)
 
   ```
-  На последнем участке 22.8 avg ping
+  На 12 шаге 25.5 avg ping
   ```
 
 
