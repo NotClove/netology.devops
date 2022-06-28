@@ -13,7 +13,7 @@
    Не могут, т.к эти файлы имеют ссылку на одинаковый инод   
    ```
 
-4. Сделайте `vagrant destroy` на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим:
+3. Сделайте `vagrant destroy` на имеющийся инстанс Ubuntu. Замените содержимое Vagrantfile следующим:
 
     ```bash
     Vagrant.configure("2") do |config|
@@ -31,27 +31,51 @@
 
     Данная конфигурация создаст новую виртуальную машину с двумя дополнительными неразмеченными дисками по 2.5 Гб.
 
+    ![03](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/03.jpg?raw=true)
+
 5. Используя `fdisk`, разбейте первый диск на 2 раздела: 2 Гб, оставшееся пространство.
+
+    ![04](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/04.jpg?raw=true)
 
 6. Используя `sfdisk`, перенесите данную таблицу разделов на второй диск.
 
+    ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/05.jpg?raw=true)
+
 7. Соберите `mdadm` RAID1 на паре разделов 2 Гб.
+
+    ![06](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/06.jpg?raw=true)
 
 8. Соберите `mdadm` RAID0 на второй паре маленьких разделов.
 
+    ![07](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/07.jpg?raw=true)
+
 9. Создайте 2 независимых PV на получившихся md-устройствах.
+
+    ![08](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/08.jpg?raw=true)
 
 10. Создайте общую volume-group на этих двух PV.
 
+    ![09](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/09.jpg?raw=true)
+
 11. Создайте LV размером 100 Мб, указав его расположение на PV с RAID0.
+
+    ![10](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/10.jpg?raw=true)
 
 12. Создайте `mkfs.ext4` ФС на получившемся LV.
 
+    ![11](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/11.jpg?raw=true)
+
 13. Смонтируйте этот раздел в любую директорию, например, `/tmp/new`.
+
+    ![12](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/12.jpg?raw=true)
 
 14. Поместите туда тестовый файл, например `wget https://mirror.yandex.ru/ubuntu/ls-lR.gz -O /tmp/new/test.gz`.
 
+    ![13](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/13.jpg?raw=true)
+
 15. Прикрепите вывод `lsblk`.
+
+    ![14](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/14.jpg?raw=true)
 
 16. Протестируйте целостность файла:
 
@@ -61,11 +85,19 @@
      0
      ```
 
+    ![15](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/15.jpg?raw=true)
+
 17. Используя pvmove, переместите содержимое PV с RAID0 на RAID1.
+
+    ![16](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/16.jpg?raw=true)
 
 18. Сделайте `--fail` на устройство в вашем RAID1 md.
 
+    ![17](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/17.jpg?raw=true)
+
 19. Подтвердите выводом `dmesg`, что RAID1 работает в деградированном состоянии.
+
+    ![18](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/18.jpg?raw=true)
 
 20. Протестируйте целостность файла, несмотря на "сбойный" диск он должен продолжать быть доступен:
 
@@ -75,4 +107,8 @@
      0
      ```
 
+    ![19](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/19.jpg?raw=true)
+
 21. Погасите тестовый хост, `vagrant destroy`.
+
+    ![20](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-05-fs/pics/20.jpg?raw=true)
