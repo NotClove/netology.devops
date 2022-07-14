@@ -25,6 +25,7 @@
     ```
    
    ![03_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/03_1.jpg?raw=true)
+
    ![03_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/03_2.jpg?raw=true)
 
 3. Какая технология используется для разделения L2 коммутатора на несколько виртуальных сетей? Какой пакет и команды есть в Linux для этого? Приведите пример конфига.
@@ -94,5 +95,7 @@
 7. Как проверить ARP таблицу в Linux, Windows? Как очистить ARP кеш полностью? Как из ARP таблицы удалить только один нужный IP?
 
    ![07_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07.jpg?raw=true)
+
    ![07_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07_2.jpg?raw=true)
+
    ![07_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07_3.jpg?raw=true)
