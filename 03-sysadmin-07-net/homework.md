@@ -2,9 +2,9 @@
 
 1. Проверьте список доступных сетевых интерфейсов на вашем компьютере. Какие команды есть для этого в Linux и в Windows?
 
-   ![01_1]()
-   ![01_2]()
-   ![01_3]()
+   ![01_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/01_1.jpg?raw=true)
+   ![01_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/01_2.jpg?raw=true)
+   ![01_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/01_3.jpg?raw=true)
 
 2. Какой протокол используется для распознавания соседа по сетевому интерфейсу? Какой пакет и команды есть в Linux для этого?
 
@@ -24,8 +24,8 @@
     lldpctl - покажет соседей, если возможно
     ```
    
-   ![03_1]()
-   ![03_2]()
+   ![03_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/03_1.jpg?raw=true)
+   ![03_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/03_2.jpg?raw=true)
 
 3. Какая технология используется для разделения L2 коммутатора на несколько виртуальных сетей? Какой пакет и команды есть в Linux для этого? Приведите пример конфига.
 
@@ -70,7 +70,7 @@
    
     ```
 
-   ![04]()
+   ![04](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/04.jpg?raw=true)
 
 5. Сколько IP адресов в сети с маской /29 ? Сколько /29 подсетей можно получить из сети с маской /24. Приведите несколько примеров /29 подсетей внутри сети 10.10.10.0/24.
 
@@ -82,7 +82,7 @@
     32 подсети
     ```
    
-   ![05]()
+   ![05](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/05.jpg?raw=true)
 
 6. Задача: вас попросили организовать стык между 2-мя организациями. Диапазоны 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16 уже заняты. Из какой подсети допустимо взять частные IP адреса? Маску выберите из расчета максимум 40-50 хостов внутри подсети.
 
@@ -93,6 +93,6 @@
 
 7. Как проверить ARP таблицу в Linux, Windows? Как очистить ARP кеш полностью? Как из ARP таблицы удалить только один нужный IP?
 
-   ![07_1]()
-   ![07_2]()
-   ![07_3]()
+   ![07_1](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07.jpg?raw=true)
+   ![07_2](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07_2.jpg?raw=true)
+   ![07_3](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/07_3.jpg?raw=true)
