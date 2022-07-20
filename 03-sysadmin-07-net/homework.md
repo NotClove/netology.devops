@@ -91,7 +91,7 @@
     100.64.0.0 - 100.127.255.255 /10
     ```
 
-
+   ![06](https://github.com/NotClove/netology.devops/blob/master/03-sysadmin-07-net/pics/06.jpg?raw=true)
 
 7. Как проверить ARP таблицу в Linux, Windows? Как очистить ARP кеш полностью? Как из ARP таблицы удалить только один нужный IP?
 
