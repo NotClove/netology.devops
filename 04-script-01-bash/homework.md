@@ -88,13 +88,12 @@
         do
                 echo "---------------- checking $i"
                 curl --connect-timeout $timeout $i:$port
-                if [[ "$?" -eq 28 ]]; then
-                        echo "`date` :: ERROR - $i is timeout" >> result.log
-                        echo "ERROR - timeout, exiting"
-                exit
+                if [[ "$?" -eq 0 ]]; then
+                        echo "$i is ok"
                 else
-                        echo "`date` :: $i is ok" >> result.log
-                        echo "ok"
+                        echo "`date` :: ERROR - $i is not available" >> result.log
+                        echo "ERROR - $i is not available, exiting"
+                exit
                 fi
         done
         sleep 10
