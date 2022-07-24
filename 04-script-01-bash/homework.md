@@ -56,9 +56,9 @@
     target=(192.168.0.1 173.194.222.113 87.250.250.242)
     port=80
     timeout=5
-    for k in {1..5}
+    for i in ${target[@]}
     do
-      for i in ${target[@]}
+      for k in {1..5}
       do
             echo "LOOP #$k ---------------- checking $i"
             curl --connect-timeout $timeout $i:$port
