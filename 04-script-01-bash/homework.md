@@ -51,11 +51,11 @@
 
     ```bash
     #!/bin/bash
-    
-    
+        
     target=(192.168.0.1 173.194.222.113 87.250.250.242)
     port=80
     timeout=5
+   
     for i in ${target[@]}
     do
       for k in {1..5}
