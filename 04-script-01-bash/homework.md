@@ -12,7 +12,7 @@
     ```
     * Какие значения переменным c,d,e будут присвоены?
 	
-	![01]()
+	![01](https://github.com/NotClove/netology.devops/blob/master/04-script-01-bash/pics/01.jpg?raw=true)
 
     * Почему?
 
