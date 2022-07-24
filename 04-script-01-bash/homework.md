@@ -51,22 +51,25 @@
 
     ```bash
     #!/bin/bash
-
+    
+    
     target=(192.168.0.1 173.194.222.113 87.250.250.242)
     port=80
     timeout=5
-   
-    for i in ${target[@]}
+    for k in {1..5}
     do
-        echo "---------------- checking $i"
-        curl --connect-timeout $timeout $i:$port
-          if [[ "$?" -eq 28 ]]; then
-                echo "`date` :: $i is timeout" >> result.log
-                echo "timeout"
-          else
-                echo "`date` :: $i is ok" >> result.log
-                echo "ok"
-          fi
+      for i in ${target[@]}
+      do
+            echo "LOOP #$k ---------------- checking $i"
+            curl --connect-timeout $timeout $i:$port
+            if [[ "$?" -eq 28 ]]; then
+                    echo "`date` :: $i is timeout" >> result.log
+                    echo "timeout"
+            else
+                    echo "`date` :: $i is ok" >> result.log
+                    echo "ok"
+            fi
+      done
     done
     ```
 
@@ -75,7 +78,7 @@
     ```bash
     #!/bin/bash
 
-    target=(192.168.1.1 173.194.222.113 87.250.250.242)
+    target=(192.168.0.1 173.194.222.113 87.250.250.242)
     port=80
     timeout=5
 
