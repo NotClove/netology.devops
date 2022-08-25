@@ -33,6 +33,23 @@ Ansible использует существующую ssh инфраструкт
 
 *Приложить вывод команд установленных версий каждой из программ, оформленный в markdown.*
 
+```
+clove@ubu:~/netology.devops$ vboxmanage -v
+6.1.36r152435
+clove@ubu:~/netology.devops$ vagrant -v
+Vagrant 2.3.0
+clove@ubu:~/netology.devops$ ansible --version
+ansible [core 2.13.3]
+  config file = None
+  configured module search path = ['/home/clove/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/clove/.local/lib/python3.10/site-packages/ansible
+  ansible collection location = /home/clove/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/clove/.local/bin/ansible
+  python version = 3.10.4 (main, Jun 29 2022, 12:14:53) [GCC 11.2.0]
+  jinja version = 3.1.2
+  libyaml = True
+```
+
 ## Задача 4 (*)
 
 Воспроизвести практическую часть лекции самостоятельно.
