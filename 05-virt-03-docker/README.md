@@ -26,6 +26,7 @@ Hey, Netology
 ### Ответ:
 https://hub.docker.com/r/notclove/nginx/tags
 
+---
 
 ## Задача 2
 
@@ -71,6 +72,8 @@ https://hub.docker.com/r/notclove/nginx/tags
   Gitlab использует контейнеризацию для CI/CD процессов и приватный Docker Registry тоже можно развернуть только на Docker
   ```
 
+---
+
 ## Задача 3
 
 - Запустите первый контейнер из образа ***centos*** c любым тэгом в фоновом режиме, подключив папку ```/data``` из текущей рабочей директории на хостовой машине в ```/data``` контейнера;
@@ -81,7 +84,9 @@ https://hub.docker.com/r/notclove/nginx/tags
 
 ### Ответ
 
-[!01](https://github.com/NotClove/netology.devops/blob/master/05-virt-03-docker/pics/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-08-25%20%D0%B2%2022.07.42.png?raw=true)
+![01](https://raw.githubusercontent.com/NotClove/netology.devops/master/05-virt-03-docker/pics/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-08-25%20%D0%B2%2022.07.42.png)
+
+---
 
 ## Задача 4 (*)
 
