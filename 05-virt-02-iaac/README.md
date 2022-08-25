@@ -49,6 +49,7 @@ ansible [core 2.13.3]
   jinja version = 3.1.2
   libyaml = True
 ```
+ ![01](https://github.com/NotClove/netology.devops/blob/master/05-virt-02-iaac/pics/Screenshot%20from%202022-08-25%2016-41-52.png?raw=true)
 
 ## Задача 4 (*)
 
@@ -59,3 +60,4 @@ ansible [core 2.13.3]
 ```
 docker ps
 ```
+ ![02](https://github.com/NotClove/netology.devops/blob/master/05-virt-02-iaac/pics/Screenshot%20from%202022-08-25%2017-25-03.png?raw=true)
