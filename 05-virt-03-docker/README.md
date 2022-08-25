@@ -81,7 +81,7 @@ https://hub.docker.com/r/notclove/nginx/tags
 
 ### Ответ
 
-[!01]()
+[!01](https://github.com/NotClove/netology.devops/blob/master/05-virt-03-docker/pics/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202022-08-25%20%D0%B2%2022.07.42.png?raw=true)
 
 ## Задача 4 (*)
 
