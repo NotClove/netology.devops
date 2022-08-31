@@ -9,7 +9,7 @@
   <img width="1200" height="600" src="./pics/image_web.png">
 </p>
 <p align="center">
-  <img width="1200" height="600" src="./pics/image_yc.png">
+  <img width="1168" height="276" src="./pics/image_yc.png">
 </p>
 
 ## Задача 2
