@@ -1,0 +1,9 @@
+[nodes:children]
+manager
+client
+
+[manager]
+node01.netology.cloud ansible_host=51.250.7.196
+
+[client]
+node02.netology.cloud ansible_host=51.250.6.105

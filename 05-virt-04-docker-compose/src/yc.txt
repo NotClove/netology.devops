@@ -1,0 +1,14 @@
+packer build centos-7-base.json
+yc vpc network create --name net --labels my-label=netology --description "netolab"
+yc vpc subnet create --name netosub-a --zone ru-central1-a --range 10.1.2.0/24 --network-name net --description "netolab"
+
+yc vpc subnet delete --name netosub-a && yc vpc network delete --name net
+
+yc compute image delete --id fd8q2bdh2nqhsim4m481
+
+# посмотреть сервис-аккаунты
+yc iam service-account --folder-id b1gc1ufn6og4q7hkvht8 list
+# создать key.json
+yc iam key create --service-account-id ajelu413pf5ev1cmunct --output key.json
+
+terraform apply -auto-approve
