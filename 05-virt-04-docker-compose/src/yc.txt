@@ -12,3 +12,4 @@ yc iam service-account --folder-id b1gc1ufn6og4q7hkvht8 list
 yc iam key create --service-account-id ajelu413pf5ev1cmunct --output key.json
 
 terraform apply -auto-approve
+terraform destroy
