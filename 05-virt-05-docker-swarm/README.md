@@ -29,7 +29,7 @@ docker node ls
 ```
 
 <p align="center">
-  <img width="1600" height="400" src="./pics/01.png">
+  <img width=100% height=100% src="./pics/01.png">
 </p>
 
 
@@ -43,7 +43,7 @@ docker service ls
 ```
 
 <p align="center">
-  <img width="1600" height="400" src="./pics/02.png">
+  <img width="100% height=100% src="./pics/02.png">
 </p>
 
 ## Задача 4 (*)
@@ -55,7 +55,7 @@ docker swarm update --autolock=true
 ```
 
 <p align="center">
-  <img width="1600" height="400" src="./pics/03.png">
+  <img width=100% height=100% src="./pics/03.png">
 </p>
 
 ```
