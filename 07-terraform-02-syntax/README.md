@@ -23,6 +23,7 @@ export YC_ZONE=`yc config list | grep zone | awk '{print $2}'`
 ## Задача 2. Создание aws ec2 или yandex_compute_instance через терраформ. 
 
 1. terraform init:
+
    ```
    terraform git:(master) ✗ terraform init
 
@@ -52,7 +53,9 @@ export YC_ZONE=`yc config list | grep zone | awk '{print $2}'`
    rerun this command to reinitialize your working directory. If you forget, other
    commands will detect it and remind you to do so if necessary.
    ```
+
 2. terraform plan
+
    ```
    terraform git:(master) ✗ terraform plan
 
@@ -163,11 +166,15 @@ export YC_ZONE=`yc config list | grep zone | awk '{print $2}'`
 
    Note: You didn't use the -out option to save this plan, so Terraform can't guarantee to take exactly these actions if you run "terraform apply" now.
    ```
+
 3. Запускаем скрипт, который создает переменные окружения и применяет terraform apply:
+
    ```bash
    source ./start.sh
    ```
+
 4. Получаем результат:
+
    ```
    Apply complete! Resources: 3 added, 0 changed, 0 destroyed.
 
