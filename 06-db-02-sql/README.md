@@ -289,13 +289,7 @@
 
 Создайте бэкап БД test_db и поместите его в volume, предназначенный для бэкапов (см. Задачу 1).
 
-```bash
-docker exec pg pg_basebackup -h localhost -U postgres -p 5432 -w -D /var/backups/pg_backup/datebase.backup -Ft
-```
-
 Остановите контейнер с PostgreSQL (но не удаляйте volumes).
-
-
 
 Поднимите новый пустой контейнер с PostgreSQL.
 
