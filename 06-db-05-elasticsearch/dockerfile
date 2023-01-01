@@ -1,0 +1,24 @@
+FROM centos:centos7
+
+RUN groupadd --gid 1000 elasticsearch && \
+        adduser --uid 1000 --gid 1000 --home /usr/share/elasticsearch elasticsearch && \
+        mkdir /var/lib/elasticsearch/ && \
+        chown -R 1000:1000 /var/lib/elasticsearch/
+
+USER 1000:1000
+
+WORKDIR /usr/share/elasticsearch
+
+COPY ./elasticsearch-8.5.3-linux-x86_64.tar.gz .
+
+RUN tar -xzf elasticsearch-8.5.3-linux-x86_64.tar.gz && \
+    cp -rp elasticsearch-8.5.3/* ./ && \
+    rm -rf elasticsearch-8.5.3* && \
+    echo "node.name: netology_test" >> /usr/share/elasticsearch/config/elasticsearch.yml;\
+    echo "network.host: 0.0.0.0" >> /usr/share/elasticsearch/config/elasticsearch.yml;\
+    echo "discovery.type: single-node" >> /usr/share/elasticsearch/config/elasticsearch.yml;\
+    echo "path.repo: /var/lib/elasticsearch" >> /usr/share/elasticsearch/config/elasticsearch.yml;
+
+EXPOSE 9200
+
+ENTRYPOINT ["bin/elasticsearch"]
