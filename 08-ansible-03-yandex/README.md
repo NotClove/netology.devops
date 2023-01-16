@@ -266,4 +266,6 @@ lighthouse-01              : ok=6    changed=0    unreachable=0    failed=0    s
 
 10. Готовый playbook выложите в свой репозиторий, поставьте тег `08-ansible-03-yandex` на фиксирующий коммит, в ответ предоставьте ссылку на него.
 
+[08-ansible-03-yandex](https://github.com/NotClove/netology.devops/commit/c7c6f87cea095aac907fb214b52a77d09c4adf40)
+
 ---
