@@ -1,0 +1,4 @@
+---
+# vars file for vector-role
+vector_version: "0.26.0"
+vector_dir: "/etc/vector"
