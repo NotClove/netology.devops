@@ -32,7 +32,7 @@
 #
 5. Опишите основные плюсы и минусы pull и push систем мониторинга.
 
-  Push модель:
+  - Push модель:
   Плюсы
   Гибкая настройка пакетов даных с метриками. На каждом агенте можем выбрать частоту и объем.
   Возможность собирать практически любые метрики, подставляя скрипты в User параметр.
@@ -44,7 +44,7 @@
   Требутеся открытие порта сервера "наружу".
   Возможно потеря данных в случае недоступности сервера.
 
-  Pull модель:
+  - Pull модель:
   Плюсы
   Контроль подлинности данных. (Получаем только оттуда, откуда запрашиваем.)
   Контроль над метриками с единой точки, возможность конеккта по SSL к агентам.
@@ -63,11 +63,11 @@
     - VictoriaMetrics
     - Nagios
 
-  Prometheus - Pull (Push с Pushgateway)
-  TICK - Push
-  Zabbix - Push (Pull с Zabbix Proxy)
-  VictoriaMetrics - Гибридная
-  Nagios - Pull
+  - Prometheus - Pull (Push с Pushgateway)
+  - TICK - Push
+  - Zabbix - Push (Pull с Zabbix Proxy)
+  - VictoriaMetrics - Гибридная
+  - Nagios - Pull
 
 #
 7. Склонируйте себе [репозиторий](https://github.com/influxdata/sandbox/tree/master) и запустите TICK-стэк, 
