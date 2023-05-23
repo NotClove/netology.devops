@@ -345,16 +345,26 @@ Job succeeded
 
 ---
 
-[pics](./pics/Screenshot%202023-05-23%20%D0%B2%2022.46.04.png)
+Запросы к приложению, до и после issue:<br>
 
-[pics2](./pics/Screenshot%202023-05-23%20%D0%B2%2022.55.55.png)
+![pics](./pics/Screenshot%202023-05-23%20%D0%B2%2022.46.04.png)
 
-[pics3](./pics/Screenshot%202023-05-23%20%D0%B2%2022.56.27.png)
+![pics2](./pics/Screenshot%202023-05-23%20%D0%B2%2022.55.55.png)
+<br>
 
-[pics4](./pics/Screenshot%202023-05-23%20%D0%B2%2022.57.35.png)
+issue:<br>
 
-[pics5](./pics/Screenshot%202023-05-23%20%D0%B2%2022.58.26.png)
+![pics3](./pics/Screenshot%202023-05-23%20%D0%B2%2022.56.27.png)
 
-[pics6](./pics/Screenshot%202023-05-23%20%D0%B2%2023.01.43.png)
+![pics4](./pics/Screenshot%202023-05-23%20%D0%B2%2022.57.35.png)
+<br>
 
----
+Работа pipeline:<br>
+
+![pics5](./pics/Screenshot%202023-05-23%20%D0%B2%2022.58.26.png)
+<br>
+
+Работа pod python-api в kubernetes:<br>
+
+![pics6](./pics/Screenshot%202023-05-23%20%D0%B2%2023.01.43.png)
+
