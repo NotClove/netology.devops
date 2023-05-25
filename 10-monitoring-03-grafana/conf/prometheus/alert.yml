@@ -1,0 +1,31 @@
+groups:
+- name: AllInstances
+  rules:
+
+  - alert: high_cpu_load_average
+    expr: ((node_load1) / count without (cpu,mode) (node_cpu_seconds_total{mode="system"}) ) > 0.8
+    for: 3m
+    labels:
+      severity: critical
+    annotations:
+      summary: "Critical: High CPU Load average(>8) on the host {{ $labels.instance }}"
+      description: "Host CPU load average is {{ $value}} on the host {{ $labels.instance }}"
+
+  - alert: high_memory_load
+    expr: ((1-(node_memory_MemAvailable_bytes/node_memory_MemTotal_bytes))*100) > 90
+    for: 30s
+    labels:
+      severity: warning
+    annotations:
+      summary: "Server memory is almost full"
+      description: "Host memory usage is {{ humanize $value}}%. Reported by instance {{ $labels.instance }} of job {{ $labels.job }}."
+
+  - alert: 'Low data disk space'
+    expr: ceil(((node_filesystem_size_bytes{mountpoint!="/boot"} - node_filesystem_free_bytes{mountpoint!="/boot"}) / node_filesystem_size_bytes{mountpoint!="/boot"} * 100)) > 90
+    labels:
+      severity: "critical"
+    annotations:
+      title: "Disk Usage"
+      description: '{{ $labels.instance }} - Partition : {{$labels.mountpoint}}'
+      summary: "Disk usage is {{humanize $value}}% "
+      host: "{{$labels.instance}}"

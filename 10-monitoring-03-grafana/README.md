@@ -57,6 +57,13 @@
 
 # Ответ:
 
+## Задание повышенной сложности
+
+[docker-compose file](./conf/docker-compose.yml)
+[prometheus config](./conf/prometheus/prometheus.yml)
+[prometheus alert](./conf/prometheus/alert.yml)
+[alertmanager](./conf/alertmanager/alertmanager.yml)
+
 ## Задание 1
 
 ![grafana](./pics/Screenshot%202023-05-26%20%D0%B2%2001.20.20.png)
