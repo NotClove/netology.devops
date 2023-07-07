@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: netology-deployment-2
+  labels:
+    app.kubernetes.io/name: deploy-2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: deploy-2
+  template:
+    metadata:
+      labels:
+        app: deploy-2
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+              name: nginx
+      initContainers:
+        - name: busybox
+          image: busybox
+          command: ["/bin/sh", "-c", "nslookup netology-deployment-service2.default.svc.cluster.local"]
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: netology-deployment-service2
+spec:
+  selector:
+    app: deploy-2
+  ports:
+  - name: nginx
+    protocol: TCP
+    port: 80
+    targetPort: nginx
