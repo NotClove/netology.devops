@@ -35,7 +35,7 @@
 
 ## Ответ:
 
-[frontend manifest](./yaml/1-frontend.yaml)
+[frontend manifest](./yaml/1-frontend.yaml) <br>
 [backend manifest](./yaml/2-backend.yaml)
 
 ![1-1](./pics/task1-pods.png)
@@ -61,6 +61,8 @@ microk8s enable ingress
 ```
 Далее применить ingress манифест:
 [ingress manifest](./yaml/3-ingress.yaml)
+
+Результат:
 
 ![2-1](./pics/task2-curl.png)
 ![2-2](./pics/task2-web1.png)
