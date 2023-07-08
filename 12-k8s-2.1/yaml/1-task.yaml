@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: shared-volume
+  labels:
+    app: shared
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: shared
+  template:
+    metadata:
+      labels:
+        app: shared
+    spec:
+      containers:
+        - name: busybox
+          image: busybox
+          command: ["/bin/sh"]
+          args: ["-c", "num=0; while true; do let num++ && echo line $num >> /share/log.txt ; sleep 5; done"]
+          volumeMounts:
+          - mountPath: /share
+            name: shared-volume
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+          - mountPath: /share
+            name: shared-volume
+          env:
+            - name: HTTP_PORT
+              value: "8080"
+      volumes:
+      - name: shared-volume
+        emptyDir:
+          sizeLimit: 100Mi
