@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: task-2
+  labels:
+    app: task-2
+spec:
+  selector:
+    matchLabels:
+      app: task-2
+  template:
+    metadata:
+      labels:
+        app: task-2
+    spec:
+      containers:
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+          - name: volume
+            mountPath: /multitool
+      volumes:
+      - name: volume
+        persistentVolumeClaim:
+          claimName: pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc
+spec:
+  storageClassName: my-nfs
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: my-nfs
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 10.129.0.7
+  share: /storage/nfs
+reclaimPolicy: Delete
+volumeBindingMode: Immediate
+mountOptions:
+  - hard
+  - nfsvers=4.1
