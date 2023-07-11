@@ -107,3 +107,5 @@ rolebinding.rbac.authorization.k8s.io/read-pods created
 Проверяем результат:
 
 ![1](./pics/task1.png)
+
+![2](./pics/task1-2.png)
