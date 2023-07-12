@@ -1,5 +1,5 @@
 # Instance settings.
-variable folder_id { default = "b1gc1ufn6og4q7hkvht8" }
+variable folder_id { default = "*" }
 variable path_to_public_key { default = "~/.ssh/id_rsa.pub" }
 variable yandex_cloud_zone { default = "ru-central1-a" }
 variable users { default = "clove" }
