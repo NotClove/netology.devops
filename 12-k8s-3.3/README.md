@@ -35,13 +35,13 @@
 [4-networkpolicy](./deploy/4-networkpolicy.yaml)
 
 Политики созданы с условием что: \
-`
-frontend --> backend
-frontend -x> cache
-backend  --> frontend
-backend  --> cache
-cache    -x> frontend
-cache    -x> backend
-`
+
+`frontend --> backend` \
+`frontend -x> cache` \
+`backend  --> frontend` \
+`backend  --> cache` \
+`cache    -x> frontend` \
+`cache    -x> backend` 
+
 
 ![1](./pics/task1.png)
