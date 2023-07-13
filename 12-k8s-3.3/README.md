@@ -34,7 +34,7 @@
 [3-cache](./deploy/3-cache.yaml)
 [4-networkpolicy](./deploy/4-networkpolicy.yaml)
 
-Политики созданы с условием что: \
+Политики созданы с условием что:
 ```
 frontend --> backend
 frontend -x> cache
