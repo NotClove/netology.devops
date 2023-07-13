@@ -28,10 +28,10 @@
 
 ## Ответ:
 
-Манифесты:
-[1-frontend](./deploy/1-frontend.yaml)
-[2-backend](./deploy/2-backend.yaml)
-[3-cache](./deploy/3-cache.yaml)
+Манифесты: \
+[1-frontend](./deploy/1-frontend.yaml) \
+[2-backend](./deploy/2-backend.yaml) \
+[3-cache](./deploy/3-cache.yaml) \
 [4-networkpolicy](./deploy/4-networkpolicy.yaml)
 
 Политики созданы с условием что:
