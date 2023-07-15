@@ -1,0 +1,86 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels:
+    app: frontend
+  namespace: default
+spec:
+  replicas: 5
+  revisionHistoryLimit: 10
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.19
+          volumeMounts:
+            - mountPath: /usr/share/nginx/html/
+              name: nginx
+          ports:
+          - containerPort: 80
+          resources:
+            limits:
+              cpu: 200m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+        - name: multitool
+          image: wbitt/network-multitool
+          volumeMounts:
+          - mountPath: /usr/share/nginx/html/
+            name: nginx
+          env:
+            - name: HTTP_PORT
+              value: "8080"
+          resources:
+            limits:
+              cpu: 200m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 256Mi
+      volumes:
+      - name: nginx
+        configMap:
+          name: frontend-configmap
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: frontend-configmap
+  namespace: default
+data:
+  index.html: |
+    <html>
+    <head>
+    <title>Hello from nging v1.19</title>
+    </head>
+    <body>
+    <h1>Hello from nging v1.19</h1>
+    </body>
+    </html
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-svc
+  namespace: default
+spec:
+  ports:
+    - name: web
+      port: 80
+      protocol: TCP
+  selector:
+    app: frontend
