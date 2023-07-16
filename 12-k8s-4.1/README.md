@@ -33,7 +33,7 @@ Resource Terraform для Yandex Cloud:
 
 ## Ответ:
 
-[terraform конфигурация](./trf/)
+[terraform конфигурация](./terraform/)
 
 Создаем требуемые ресурсы:
 ![1](./pics/1.png)
